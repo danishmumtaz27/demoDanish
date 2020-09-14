@@ -1,0 +1,19 @@
+<table class="table table-sm">
+    <thead>
+      <tr>
+        
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Date Of Joining</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let employee of empList'>
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>
+        <td>{{employee.joiningDate | date:'dd/MM/yyyy'}}</td>
+        <td><button class="btn btn-danger" (click)="deleteStudent(employee.id)">DELETE</button></td>
+      </tr>
+    </tbody>
+</table>
